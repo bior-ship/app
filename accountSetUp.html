@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Account Set Up</title>
+</head>
+<body>
+  <!-- Your account setup HTML content goes here -->
+
+  <script>
+    // Function to get query parameters from the URL
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Get the username from the URL
+    const username = getQueryParam('username');
+
+    // Set the page title if the username is present
+    if (username) {
+      document.title = `${username} - Account Set Up`;
+    }
+  </script>
+</body>
+</html>
